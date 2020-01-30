@@ -1,35 +1,35 @@
 {
-  "name": "postcss-browser",
-  "version": "7.0.26",
-  "main": "dist/postcss-browser.js",
-  "module": "dist/postcss-browser.es.js",
-  "repository": "https://github.com/mapgrid/postcss-browser",
-  "author": "MapGrid <noreply@mapgrid.org>",
-  "license": "MIT",
-  "devDependencies": {
-    "@mapgrid/postcss": "^7.0.26",
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-import": "^2.18.2",
-    "prettier": "^1.19.1",
-    "rollup": "^1.29.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-globals": "^1.4.0",
-    "rollup-plugin-terser": "^5.2.0"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "format": "prettier --write \"**/*.js\" .eslintrc",
-    "lint": "eslint .",
-    "prepublishOnly": "yarn run lint",
-    "preversion": "yarn run lint",
-    "postversion": "git push && git push --tags",
-    "track": "./scripts/track-version.sh"
-  },
-  "files": [
-    "dist/**/*"
-  ]
+    "name": "postcss-browser",
+    "version": "7.0.26",
+    "main": "dist/postcss-browser.js",
+    "module": "dist/postcss-browser.es.js",
+    "repository": "https://github.com/mapgrid/postcss-browser",
+    "author": "MapGrid <noreply@mapgrid.org>",
+    "license": "MIT",
+    "devDependencies": {
+        "@mapgrid/postcss": "^7.0.26",
+        "@rollup/plugin-commonjs": "^11.0.1",
+        "@rollup/plugin-node-resolve": "^7.0.0",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-import": "^2.18.2",
+        "prettier": "^1.19.1",
+        "rollup": "^1.29.0",
+        "rollup-plugin-node-builtins": "^2.1.2",
+        "rollup-plugin-node-globals": "^1.4.0",
+        "rollup-plugin-terser": "^5.2.0"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "format": "prettier --write \"**/*.js\" .eslintrc",
+        "lint": "eslint .",
+        "prepublishOnly": "yarn run lint",
+        "preversion": "yarn run lint",
+        "postversion": "./scripts/push.sh",
+        "track": "./scripts/track-version.sh"
+    },
+    "files": [
+        "dist/**/*"
+    ]
 }
